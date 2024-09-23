@@ -117,22 +117,6 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='CancelFailed'"
-    )
-    public void wheneverCancelFailed_BuyHistory(
-        @Payload CancelFailed cancelFailed
-    ) {
-        CancelFailed event = cancelFailed;
-        System.out.println(
-            "\n\n##### listener BuyHistory : " + cancelFailed + "\n\n"
-        );
-
-        // Sample Logic //
-        History.buyHistory(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='BuyComplete'"
     )
     public void wheneverBuyComplete_UserInfoCheck(
@@ -141,26 +125,6 @@ public class PolicyHandler {
         BuyComplete event = buyComplete;
         System.out.println(
             "\n\n##### listener UserInfoCheck : " + buyComplete + "\n\n"
-        );
-
-        // Comments //
-        //고객 포인트 현황. 구매하려는 웹툰 보유 현황 등 조회
-        //
-
-        // Sample Logic //
-        History.userInfoCheck(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='CancelComplete'"
-    )
-    public void wheneverCancelComplete_UserInfoCheck(
-        @Payload CancelComplete cancelComplete
-    ) {
-        CancelComplete event = cancelComplete;
-        System.out.println(
-            "\n\n##### listener UserInfoCheck : " + cancelComplete + "\n\n"
         );
 
         // Comments //

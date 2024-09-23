@@ -50,16 +50,16 @@ public class Purchase {
             this
         );
         purchaseCancelFailed.publishAfterCommit();
+    }
 
+    @PreRemove
+    public void onPreRemove() {
         CancelComplete cancelComplete = new CancelComplete(this);
         cancelComplete.publishAfterCommit();
 
         CancelFailed cancelFailed = new CancelFailed(this);
         cancelFailed.publishAfterCommit();
     }
-
-    @PreRemove
-    public void onPreRemove() {}
 
     public static PurchaseRepository repository() {
         PurchaseRepository purchaseRepository = PurchaseserviceApplication.applicationContext.getBean(

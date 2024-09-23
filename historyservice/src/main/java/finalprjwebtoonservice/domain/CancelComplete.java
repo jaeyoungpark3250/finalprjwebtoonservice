@@ -14,5 +14,4 @@ public class CancelComplete extends AbstractEvent {
     private String userId;
     private String webtoonId;
     private String status;
-    private Integer myPoint;
 }

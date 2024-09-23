@@ -17,6 +17,10 @@ public class HistoryCreated extends AbstractEvent {
     private Integer price;
     private String status;
 
+    public HistoryCreated(History aggregate) {
+        super(aggregate);
+    }
+
     public HistoryCreated() {
         super();
     }

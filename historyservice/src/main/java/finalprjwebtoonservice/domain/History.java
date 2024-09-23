@@ -3,6 +3,7 @@ package finalprjwebtoonservice.domain;
 import finalprjwebtoonservice.HistoryserviceApplication;
 import finalprjwebtoonservice.domain.CheckCorrected;
 import finalprjwebtoonservice.domain.CheckRejected;
+import finalprjwebtoonservice.domain.HistoryCreated;
 import finalprjwebtoonservice.domain.HistoryUpdated;
 import finalprjwebtoonservice.domain.OpenApproved;
 import finalprjwebtoonservice.domain.OpenRejected;
@@ -53,6 +54,9 @@ public class History {
 
     @PostUpdate
     public void onPostUpdate() {
+        HistoryCreated historyCreated = new HistoryCreated(this);
+        historyCreated.publishAfterCommit();
+
         HistoryUpdated historyUpdated = new HistoryUpdated(this);
         historyUpdated.publishAfterCommit();
 
@@ -241,34 +245,6 @@ public class History {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void buyHistory(CancelFailed cancelFailed) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        History history = new History();
-        repository().save(history);
-
-        HistoryUpdated historyUpdated = new HistoryUpdated(history);
-        historyUpdated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(cancelFailed.get???()).ifPresent(history->{
-            
-            history // do something
-            repository().save(history);
-
-            HistoryUpdated historyUpdated = new HistoryUpdated(history);
-            historyUpdated.publishAfterCommit();
-
-         });
-        */
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
     public static void userInfoCheck(BuyComplete buyComplete) {
         //implement business logic here:
 
@@ -285,38 +261,6 @@ public class History {
         /** Example 2:  finding and process
         
         repository().findById(buyComplete.get???()).ifPresent(history->{
-            
-            history // do something
-            repository().save(history);
-
-            CheckRejected checkRejected = new CheckRejected(history);
-            checkRejected.publishAfterCommit();
-            CheckCorrected checkCorrected = new CheckCorrected(history);
-            checkCorrected.publishAfterCommit();
-
-         });
-        */
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
-    public static void userInfoCheck(CancelComplete cancelComplete) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        History history = new History();
-        repository().save(history);
-
-        CheckRejected checkRejected = new CheckRejected(history);
-        checkRejected.publishAfterCommit();
-        CheckCorrected checkCorrected = new CheckCorrected(history);
-        checkCorrected.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(cancelComplete.get???()).ifPresent(history->{
             
             history // do something
             repository().save(history);
