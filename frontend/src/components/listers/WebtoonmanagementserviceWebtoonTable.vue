@@ -67,6 +67,12 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "webtoonId", value: "webtoonId" },
+                    { text: "title", value: "title" },
+                    { text: "author", value: "author" },
+                    { text: "point", value: "point" },
+                    { text: "episode", value: "episode" },
+                    { text: "status", value: "status" },
                 ],
             webtoon : [],
             newValue: {},
@@ -84,6 +90,12 @@
             this.values = temp.data._embedded.webtoons;
 
             this.newValue = {
+                'webtoonId': '',
+                'title': '',
+                'author': '',
+                'point': 0,
+                'episode': '',
+                'status': '',
             }
         },
         methods: {

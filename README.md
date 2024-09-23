@@ -40,19 +40,19 @@ mvn spring-boot:run
 ```
 - paymentservice
 ```
- http :8088/payments id="id" 
+ http :8088/payments id="id" point="point" userId="userId" price="price" status="status" 
 ```
 - historyservice
 ```
- http :8088/histories id="id" 
+ http :8088/histories id="id" userId="userId" point="point" price="price" webtoonId="webtoonId" myPoint="myPoint" status="status" 
 ```
 - webtoonmanagementservice
 ```
- http :8088/webtoons id="id" 
+ http :8088/webtoons id="id" webtoonId="webtoonId" title="title" author="author" point="point" episode="episode" status="status" 
 ```
 - purchaseservice
 ```
- http :8088/purchases id="id" 
+ http :8088/purchases id="id" userId="userId" point="point" webtoonId="webtoonId" status="status" 
 ```
 
 

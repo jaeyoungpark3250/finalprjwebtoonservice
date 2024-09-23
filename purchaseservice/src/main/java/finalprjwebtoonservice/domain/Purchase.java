@@ -23,6 +23,14 @@ public class Purchase {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String userId;
+
+    private Integer point;
+
+    private String webtoonId;
+
+    private String status;
+
     @PostPersist
     public void onPostPersist() {
         BuyComplete buyComplete = new BuyComplete(this);

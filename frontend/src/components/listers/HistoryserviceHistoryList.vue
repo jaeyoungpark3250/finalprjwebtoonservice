@@ -41,10 +41,22 @@
                     <v-list-item-content>
                         <v-list-item-title style="margin-bottom:10px;">
                             
+                            
+                            
+                            
+                            
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Point :  {{data.point }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Price :  {{data.price }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ WebtoonId :  {{data.webtoonId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MyPoint :  {{data.myPoint }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -112,6 +124,12 @@
             this.values = temp.data._embedded.histories;
             
             this.newValue = {
+                'userId': '',
+                'point': 0,
+                'price': 0,
+                'webtoonId': '',
+                'myPoint': 0,
+                'status': '',
             }
         },
         methods: {

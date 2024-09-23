@@ -109,6 +109,12 @@
             me.values = temp.data._embedded.webtoons;
             
             me.newValue = {
+                'webtoonId': '',
+                'title': '',
+                'author': '',
+                'point': 0,
+                'episode': '',
+                'status': '',
             }
         },
         methods:{

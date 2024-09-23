@@ -67,6 +67,10 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "point", value: "point" },
+                    { text: "userId", value: "userId" },
+                    { text: "price", value: "price" },
+                    { text: "status", value: "status" },
                 ],
             payment : [],
             newValue: {},
@@ -84,6 +88,10 @@
             this.values = temp.data._embedded.payments;
 
             this.newValue = {
+                'point': 0,
+                'userId': '',
+                'price': 0,
+                'status': '',
             }
         },
         methods: {

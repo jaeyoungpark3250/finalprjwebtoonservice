@@ -24,6 +24,18 @@ public class History {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String userId;
+
+    private Integer point;
+
+    private Integer price;
+
+    private String webtoonId;
+
+    private Integer myPoint;
+
+    private String status;
+
     @PostPersist
     public void onPostPersist() {
         HistoryUpdated historyUpdated = new HistoryUpdated(this);

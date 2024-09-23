@@ -22,6 +22,18 @@ public class Webtoon {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String webtoonId;
+
+    private String title;
+
+    private String author;
+
+    private Integer point;
+
+    private String episode;
+
+    private String status;
+
     @PostPersist
     public void onPostPersist() {
         Uploaded uploaded = new Uploaded(this);

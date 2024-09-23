@@ -67,6 +67,12 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "userId", value: "userId" },
+                    { text: "point", value: "point" },
+                    { text: "price", value: "price" },
+                    { text: "webtoonId", value: "webtoonId" },
+                    { text: "myPoint", value: "myPoint" },
+                    { text: "status", value: "status" },
                 ],
             history : [],
             newValue: {},
@@ -84,6 +90,12 @@
             this.values = temp.data._embedded.histories;
 
             this.newValue = {
+                'userId': '',
+                'point': 0,
+                'price': 0,
+                'webtoonId': '',
+                'myPoint': 0,
+                'status': '',
             }
         },
         methods: {

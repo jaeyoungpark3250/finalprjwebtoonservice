@@ -41,10 +41,22 @@
                     <v-list-item-content>
                         <v-list-item-title style="margin-bottom:10px;">
                             
+                            
+                            
+                            
+                            
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ WebtoonId :  {{data.webtoonId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Title :  {{data.title }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Author :  {{data.author }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Point :  {{data.point }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Episode :  {{data.episode }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -112,6 +124,12 @@
             this.values = temp.data._embedded.webtoons;
             
             this.newValue = {
+                'webtoonId': '',
+                'title': '',
+                'author': '',
+                'point': 0,
+                'episode': '',
+                'status': '',
             }
         },
         methods: {

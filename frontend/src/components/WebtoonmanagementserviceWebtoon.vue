@@ -16,6 +16,12 @@
         </v-card-title >        
 
         <v-card-text>
+            <String label="WebtoonId" v-model="value.webtoonId" :editMode="editMode" :inputUI="''"/>
+            <String label="Title" v-model="value.title" :editMode="editMode" :inputUI="''"/>
+            <String label="Author" v-model="value.author" :editMode="editMode" :inputUI="''"/>
+            <Number label="Point" v-model="value.point" :editMode="editMode" :inputUI="''"/>
+            <String label="Episode" v-model="value.episode" :editMode="editMode" :inputUI="''"/>
+            <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>

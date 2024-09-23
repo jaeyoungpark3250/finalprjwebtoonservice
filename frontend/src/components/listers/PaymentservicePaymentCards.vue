@@ -109,6 +109,10 @@
             me.values = temp.data._embedded.payments;
             
             me.newValue = {
+                'point': 0,
+                'userId': '',
+                'price': 0,
+                'status': '',
             }
         },
         methods:{

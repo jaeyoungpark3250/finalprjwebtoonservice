@@ -109,6 +109,12 @@
             me.values = temp.data._embedded.histories;
             
             me.newValue = {
+                'userId': '',
+                'point': 0,
+                'price': 0,
+                'webtoonId': '',
+                'myPoint': 0,
+                'status': '',
             }
         },
         methods:{

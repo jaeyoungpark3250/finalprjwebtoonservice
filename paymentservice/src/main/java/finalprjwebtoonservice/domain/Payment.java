@@ -20,6 +20,14 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private Integer point;
+
+    private String userId;
+
+    private Integer price;
+
+    private String status;
+
     @PostPersist
     public void onPostPersist() {
         PaymenteComplete paymenteComplete = new PaymenteComplete(this);

@@ -5,6 +5,24 @@
         </v-card-title>
 
         <v-card-text>
+            <div>
+                <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="Point" v-model="item.point" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="Price" v-model="item.price" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="WebtoonId" v-model="item.webtoonId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="MyPoint" v-model="item.myPoint" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>
