@@ -45,12 +45,14 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Point :  {{data.point }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MyPoint :  {{data.myPoint }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ WebtoonId :  {{data.webtoonId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
@@ -122,6 +124,7 @@
             this.newValue = {
                 'userId': '',
                 'point': 0,
+                'myPoint': 0,
                 'webtoonId': '',
                 'status': '',
             }

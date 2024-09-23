@@ -16,6 +16,7 @@ public class CancelFailed extends AbstractEvent {
     private String userId;
     private String webtoonId;
     private String status;
+    private Integer myPoint;
 
     public CancelFailed(Purchase aggregate) {
         super(aggregate);

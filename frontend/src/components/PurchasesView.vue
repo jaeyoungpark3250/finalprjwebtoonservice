@@ -26,6 +26,7 @@
                 { text: "webtoonId", value: "webtoonId" },
                 { text: "point", value: "point" },
                 { text: "status", value: "status" },
+                { text: "myPoint", value: "myPoint" },
             ],
             purchases : [],
         }),

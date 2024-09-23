@@ -2,10 +2,8 @@ package finalprjwebtoonservice.domain;
 
 import finalprjwebtoonservice.WebtoonmanagementserviceApplication;
 import finalprjwebtoonservice.domain.OpenChecked;
-import finalprjwebtoonservice.domain.ReadFailed;
 import finalprjwebtoonservice.domain.Updateed;
 import finalprjwebtoonservice.domain.Uploaded;
-import finalprjwebtoonservice.domain.WebtoonReaded;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -44,12 +42,6 @@ public class Webtoon {
 
         OpenChecked openChecked = new OpenChecked(this);
         openChecked.publishAfterCommit();
-
-        WebtoonReaded webtoonReaded = new WebtoonReaded(this);
-        webtoonReaded.publishAfterCommit();
-
-        ReadFailed readFailed = new ReadFailed(this);
-        readFailed.publishAfterCommit();
     }
 
     public static WebtoonRepository repository() {
@@ -88,8 +80,6 @@ public class Webtoon {
         Webtoon webtoon = new Webtoon();
         repository().save(webtoon);
 
-        WebtoonReaded webtoonReaded = new WebtoonReaded(webtoon);
-        webtoonReaded.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -99,8 +89,6 @@ public class Webtoon {
             webtoon // do something
             repository().save(webtoon);
 
-            WebtoonReaded webtoonReaded = new WebtoonReaded(webtoon);
-            webtoonReaded.publishAfterCommit();
 
          });
         */
@@ -116,8 +104,6 @@ public class Webtoon {
         Webtoon webtoon = new Webtoon();
         repository().save(webtoon);
 
-        ReadFailed readFailed = new ReadFailed(webtoon);
-        readFailed.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -127,8 +113,6 @@ public class Webtoon {
             webtoon // do something
             repository().save(webtoon);
 
-            ReadFailed readFailed = new ReadFailed(webtoon);
-            readFailed.publishAfterCommit();
 
          });
         */

@@ -21,6 +21,9 @@
                                 Point :  {{item.point }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
+                                MyPoint :  {{item.myPoint }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
                                 WebtoonId :  {{item.webtoonId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
@@ -77,6 +80,8 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
                     
                     
                     

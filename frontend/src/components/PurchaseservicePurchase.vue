@@ -18,6 +18,7 @@
         <v-card-text>
             <String label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
             <Number label="Point" v-model="value.point" :editMode="editMode" :inputUI="''"/>
+            <Number label="MyPoint" v-model="value.myPoint" :editMode="editMode" :inputUI="''"/>
             <String label="WebtoonId" v-model="value.webtoonId" :editMode="editMode" :inputUI="''"/>
             <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
         </v-card-text>

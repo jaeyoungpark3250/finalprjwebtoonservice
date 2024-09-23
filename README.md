@@ -52,7 +52,7 @@ mvn spring-boot:run
 ```
 - purchaseservice
 ```
- http :8088/purchases id="id" userId="userId" point="point" webtoonId="webtoonId" status="status" 
+ http :8088/purchases id="id" userId="userId" point="point" myPoint="myPoint" webtoonId="webtoonId" status="status" 
 ```
 
 

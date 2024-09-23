@@ -12,6 +12,9 @@
                 <Number label="Point" v-model="item.point" :editMode="editMode" @change="change" />
             </div>
             <div>
+                <Number label="MyPoint" v-model="item.myPoint" :editMode="editMode" @change="change" />
+            </div>
+            <div>
                 <String label="WebtoonId" v-model="item.webtoonId" :editMode="editMode" @change="change" />
             </div>
             <div>

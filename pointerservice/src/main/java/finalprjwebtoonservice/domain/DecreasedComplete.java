@@ -9,20 +9,16 @@ import lombok.*;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class BuyComplete extends AbstractEvent {
+public class DecreasedComplete extends AbstractEvent {
 
     private Long id;
-    private String userId;
     private Integer point;
-    private Integer myPoint;
-    private String webtoonId;
-    private String status;
 
-    public BuyComplete(Purchase aggregate) {
+    public DecreasedComplete(Pointer aggregate) {
         super(aggregate);
     }
 
-    public BuyComplete() {
+    public DecreasedComplete() {
         super();
     }
 }

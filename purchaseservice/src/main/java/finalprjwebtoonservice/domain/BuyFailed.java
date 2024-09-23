@@ -12,8 +12,9 @@ import lombok.*;
 public class BuyFailed extends AbstractEvent {
 
     private Long id;
-    private Integer point;
     private String userId;
+    private Integer point;
+    private Integer myPoint;
     private String webtoonId;
     private String status;
 

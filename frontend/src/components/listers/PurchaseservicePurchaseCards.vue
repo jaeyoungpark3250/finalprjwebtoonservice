@@ -111,6 +111,7 @@
             me.newValue = {
                 'userId': '',
                 'point': 0,
+                'myPoint': 0,
                 'webtoonId': '',
                 'status': '',
             }

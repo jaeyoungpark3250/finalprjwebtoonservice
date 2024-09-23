@@ -69,6 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "userId", value: "userId" },
                     { text: "point", value: "point" },
+                    { text: "myPoint", value: "myPoint" },
                     { text: "webtoonId", value: "webtoonId" },
                     { text: "status", value: "status" },
                 ],
@@ -90,6 +91,7 @@
             this.newValue = {
                 'userId': '',
                 'point': 0,
+                'myPoint': 0,
                 'webtoonId': '',
                 'status': '',
             }

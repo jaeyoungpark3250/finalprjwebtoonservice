@@ -20,4 +20,5 @@ public class Purchases {
     private String webtoonId;
     private String point;
     private String status;
+    private Integer myPoint;
 }
