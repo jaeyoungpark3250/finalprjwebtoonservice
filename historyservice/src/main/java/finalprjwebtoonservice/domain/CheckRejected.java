@@ -16,7 +16,8 @@ public class CheckRejected extends AbstractEvent {
     private String userId;
     private String webtoonId;
     private String status;
-    private String myPoint;
+    private Integer price;
+    private Integer myPoint;
 
     public CheckRejected(History aggregate) {
         super(aggregate);

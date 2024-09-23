@@ -16,7 +16,8 @@ public class HistoryUpdated extends AbstractEvent {
     private String userId;
     private String webtoonId;
     private String status;
-    private String myPoint;
+    private Integer price;
+    private Integer myPoint;
 
     public HistoryUpdated(History aggregate) {
         super(aggregate);

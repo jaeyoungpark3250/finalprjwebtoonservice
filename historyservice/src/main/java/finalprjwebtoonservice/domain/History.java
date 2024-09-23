@@ -38,15 +38,6 @@ public class History {
 
     @PostPersist
     public void onPostPersist() {
-        HistoryUpdated historyUpdated = new HistoryUpdated(this);
-        historyUpdated.publishAfterCommit();
-
-        CheckCorrected checkCorrected = new CheckCorrected(this);
-        checkCorrected.publishAfterCommit();
-
-        CheckRejected checkRejected = new CheckRejected(this);
-        checkRejected.publishAfterCommit();
-
         UserCreated userCreated = new UserCreated(this);
         userCreated.publishAfterCommit();
 
@@ -58,6 +49,18 @@ public class History {
 
         OpenRejected openRejected = new OpenRejected(this);
         openRejected.publishAfterCommit();
+    }
+
+    @PostUpdate
+    public void onPostUpdate() {
+        HistoryUpdated historyUpdated = new HistoryUpdated(this);
+        historyUpdated.publishAfterCommit();
+
+        CheckCorrected checkCorrected = new CheckCorrected(this);
+        checkCorrected.publishAfterCommit();
+
+        CheckRejected checkRejected = new CheckRejected(this);
+        checkRejected.publishAfterCommit();
     }
 
     public static HistoryRepository repository() {
