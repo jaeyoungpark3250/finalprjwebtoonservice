@@ -252,10 +252,10 @@ public class History {
         History history = new History();
         repository().save(history);
 
-        CheckRejected checkRejected = new CheckRejected(history);
-        checkRejected.publishAfterCommit();
         CheckCorrected checkCorrected = new CheckCorrected(history);
         checkCorrected.publishAfterCommit();
+        CheckRejected checkRejected = new CheckRejected(history);
+        checkRejected.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -265,10 +265,10 @@ public class History {
             history // do something
             repository().save(history);
 
-            CheckRejected checkRejected = new CheckRejected(history);
-            checkRejected.publishAfterCommit();
             CheckCorrected checkCorrected = new CheckCorrected(history);
             checkCorrected.publishAfterCommit();
+            CheckRejected checkRejected = new CheckRejected(history);
+            checkRejected.publishAfterCommit();
 
          });
         */
